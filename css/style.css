@@ -1,68 +1,70 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-div#app{
+div#app {
     height: 100vh;
     width: 100%;
 
     background: linear-gradient(to bottom, #009688 0px, #009688 15vh,
-    #dddbd1 15vh, #d2dbdc 100%);
+            #dddbd1 15vh, #d2dbdc 100%);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main{
+main {
     height: 94%;
     width: 80%;
     background-color: red;
 }
 
-main section.userbar{
+main section.userbar {
     width: 35%;
     background-color: #ffffff;
 }
 
-section div.user-profile{
+section div.user-profile {
     height: 70px;
     background-color: #eaeaea;
+    border-right: 1px solid #B1B1B1;
 }
-.user-chat-profile{
+
+.user-chat-profile {
     display: flex;
     justify-content: space-between;
 }
 
-section.userbar div.notifications{
+section.userbar div.notifications {
     height: 80px;
     background-color: #8edafc;
 }
 
-section.userbar div.searchbar{
+section.userbar div.searchbar {
     height: 60px;
     background-color: #fafafa;
 }
 
-section.userbar div.contacts{
+section.userbar div.contacts {
     height: calc(100% - 210px);
     background-color: #ffffff;
 }
 
-main section.conversation-container{
+main section.conversation-container {
     width: 65%;
     background-color: #eaeaea;
 }
 
-div.messages{
+div.messages {
     height: calc(100% - 145px);
     background-image: url('../img/mine.jpg');
     padding: 2rem;
 }
 
-div.messages > article.message{
+div.messages>article.message {
     padding: 1rem 1.25rem;
     border-radius: 1rem;
     margin: 0 2rem .8rem 2rem;
@@ -70,97 +72,132 @@ div.messages > article.message{
     clear: both;
 }
 
-div.messages > article.message.received{
+div.messages>article.message.received {
     float: left;
     background-color: #ffffff;
     margin-right: 5rem;
 }
 
-div.messages > article.message.sent{
+div.messages>article.message.sent {
     float: right;
     background-color: #d5f9ba;
     margin-left: 5rem;
 }
 
-main section.conversation-container div.message-input{
+main section.conversation-container div.message-input {
     height: 75px;
     background-color: #f3eeea;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.flex-column{
+.flex-column {
     flex-direction: column;
 }
 
-.clearflix::after{
+.clearflix::after {
     display: block;
     clear: both;
-    content:'';
+    content: '';
 }
 
 img.my-io {
     width: 13%;
     border-radius: 50%;
     margin-top: .2rem;
-    margin-left: .4rem
+    margin-left: .4rem;
+    margin-bottom: .2rem;
 }
+
 p.grassetto {
     font-size: 13px;
     font-weight: bold;
 }
-.grey{
+
+.grey {
     font-size: 13px;
     color: #B1B1B1;
 }
 
-.contacts{
+.contacts {
     border: solid 1px #EAEAEA;
     display: flex;
     align-items: center;
     position: relative;
 }
-.info-contact{
-    padding-left:.7rem
+
+.info-contact {
+    padding-left: .7rem
 }
 
-.absolute{
+.absolute {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
 }
+.fa-regular,
+.fa-solid {
+    color: #B1B1B1;
+}
+
 .circle {
     border-radius: 50%;
     background-color: white;
     width: 40px;
     height: 40px;
+    margin-left: .5rem;
+    margin-top: .7rem;
+}
+
+.fa-bell-slash {
+    color: #8EDAFC;
+    padding-top: .7rem;
     display: flex;
     justify-content: center;
-    margin-left: .5rem;
+}
+
+.notifications {
+    display: flex;
 }
 
 ul {
     list-style-type: none;
     display: flex;
-    padding: 1rem 0;
+    align-items: center;
+    padding: 1.3rem;
 }
 
 li {
     padding: 0 .4rem;
 }
 
-.chat-avatar{
+.chat-avatar {
     width: 8%;
     height: 80%;
-    border-radius:50%
+    border-radius: 50%
 }
 
-.profile{
-    display:flex;
+.profile {
+    display: flex;
     align-items: center;
 }
-.active{
+
+.active {
     background-color: #B1B1B1;
+}
+
+
+
+.text-alert {
+    padding: 1rem .7rem;
+}
+
+.searchbar{
+    padding: .5rem ;
+}
+
+.newChat{
+    width: 100%;
 }
