@@ -18,10 +18,19 @@
     <div id="app">
         <main class="flex">
             <section class="userbar flex  flex-column">
-                <div class="user-profile"></div>
+                <div class="user-profile user-chat-profile">
+                    <img class="my-io" src="./img/avatar_io.jpg">
+                    <div class="icons">
+                        <ul>
+                            <li><i class="fa-solid fa-circle-notch"></i></li>
+                            <li><i class="fa-solid fa-message"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="notifications"></div>
                 <div class="searchbar"></div>
-                <div class="contacts" v-for="(element,index) in contacts">
+                <div class="contacts" v-for="(element,index) in contacts" @click="Chat(index)" :class= "(index === currentChat) ? 'active' : '' ">
                     <!-- TODO: contacts list will show up here -->
                     <img class="my-io" :src="element.avatar">
                         <div class="info-contact">
@@ -34,10 +43,16 @@
                 </div>
             </section>
             <section class="conversation-container flex flex-column">
-                <div class="user-profile"></div>
+                <div class="user-profile profile">
+                    <img class="chat-avatar" :src="contacts[currentChat].avatar">
+                    <div class="info-contact">
+                        <p class="grassetto">{{contacts[currentChat].name}}</p>
+                        <p class="grey">Ultimo accesso oggi alle 12.00</p>
+                    </div>
+                </div>
                 <div class="messages clearfix">
                     <article class="message received">
-                        Sciao Belo, stasero vieno?
+                        ciao
                     </article>
                     <article class="message sent">
                         No dottoressa, veramente sarei occupato.
