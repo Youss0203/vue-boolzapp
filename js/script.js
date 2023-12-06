@@ -166,17 +166,15 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            
 
         }   
     },
     methods:{
-        Chat(index){
-            this.currentChat
-            for (let i= 0; i < this.contacts.length; i++) {
-                this.contacts[i] = i === index;
-            }
-
-        }
+        chat(index){
+            this.currentChat = index;
     }
+}
 }).mount('#app'); 
+

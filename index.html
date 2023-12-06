@@ -30,7 +30,7 @@
                 </div>
                 <div class="notifications"></div>
                 <div class="searchbar"></div>
-                <div class="contacts" v-for="(element,index) in contacts" @click="Chat(index)" :class= "(index === currentChat) ? 'active' : '' ">
+                <div class="contacts" v-for="(element,index) in contacts" @click="chat(index)" :class= "(index === currentChat) ? 'active' : '' ">
                     <!-- TODO: contacts list will show up here -->
                     <img class="my-io" :src="element.avatar">
                         <div class="info-contact">
@@ -50,19 +50,11 @@
                         <p class="grey">Ultimo accesso oggi alle 12.00</p>
                     </div>
                 </div>
-                <div class="messages clearfix">
-                    <article class="message received">
-                        ciao
+                <div class="messages clearfix" v-for="messaggio in contacts[currentChat].messages">
+                    <article class="message" :class="(messaggio.status === 'sent')  ? 'sent' : 'received'">
+                        {{messaggio.message}}
                     </article>
-                    <article class="message sent">
-                        No dottoressa, veramente sarei occupato.
-                    </article>
-                    <article class="message received">
-                        Si ma tu ha serio problemo, sposto sembro!
-                    </article>
-                    <article class="message sent">
-                        Se vengo da una psichiatra ci sara' un motivo!!!!
-                    </article>
+                    
                 </div>
                 <div class="message-input"></div>
             </section>
