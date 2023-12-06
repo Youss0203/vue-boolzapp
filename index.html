@@ -58,14 +58,27 @@
                         <p class="grassetto">{{contacts[currentChat].name}}</p>
                         <p class="grey">Ultimo accesso oggi alle 12.00</p>
                     </div>
+                    <div class="icons-chat">
+                        <ul>
+                            <li><i class="fa-solid fa-circle-notch"></i></li>
+                            <li><i class="fa-solid fa-message"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                        </ul>
+                    </div>
                 </div>
+                
                 <div class="messages clearfix" v-for="messaggio in contacts[currentChat].messages">
-                    <article class="message" :class="(messaggio.status === 'sent')  ? 'sent' : 'received'">
+                <article class="message" :class="(messaggio.status === 'sent')  ? 'sent' : 'received'">
                         {{messaggio.message}}
                     </article>
-                    
+                
                 </div>
-                <div class="message-input"></div>
+           
+                <div class="message-input flex-center">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" class="new-message" placeholder="scrivi un messaggio">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                </div>
             </section>
         </main>
     </div>

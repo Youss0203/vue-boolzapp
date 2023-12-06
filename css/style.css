@@ -97,7 +97,7 @@ main section.conversation-container div.message-input {
     flex-direction: column;
 }
 
-.clearflix::after {
+.clearfix::after {
     display: block;
     clear: both;
     content: '';
@@ -137,6 +137,7 @@ p.grassetto {
     top: 0;
     right: 0;
 }
+
 .fa-regular,
 .fa-solid {
     color: #B1B1B1;
@@ -185,7 +186,7 @@ li {
 }
 
 .active {
-    background-color: #B1B1B1;
+    background-color: grey;
 }
 
 
@@ -194,10 +195,33 @@ li {
     padding: 1rem .7rem;
 }
 
-.searchbar{
-    padding: .5rem ;
+.searchbar {
+    padding: .5rem;
 }
 
-.newChat{
+.newChat {
     width: 100%;
+}
+
+.icons-chat {
+    padding-left: 27rem;
+}
+
+.new-message {
+    width: 90%;
+    margin: 0 .5rem;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem 0;
+
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0
+}
+.fa-face-smile,
+.fa-microphone-lines{
+    padding-top:1rem;
 }
