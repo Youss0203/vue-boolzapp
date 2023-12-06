@@ -21,8 +21,16 @@
                 <div class="user-profile"></div>
                 <div class="notifications"></div>
                 <div class="searchbar"></div>
-                <div class="contacts">
+                <div class="contacts" v-for="(element,index) in contacts">
                     <!-- TODO: contacts list will show up here -->
+                    <img class="my-io" :src="element.avatar">
+                        <div class="info-contact">
+                            <p class="grassetto">{{element.name}}</p>
+                            <p class="grey">Ultimo messaggio inviato</p>
+                        </div>
+                        <div>
+                            <p class="absolute grey">12.00</p>
+                        </div>
                 </div>
             </section>
             <section class="conversation-container flex flex-column">

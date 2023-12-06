@@ -97,3 +97,42 @@ main section.conversation-container div.message-input{
     content:'';
 }
 
+img.my-io {
+    width: 13%;
+    border-radius: 50%;
+    margin-top: .2rem;
+    margin-left: .4rem
+}
+p.grassetto {
+    font-size: 13px;
+    font-weight: bold;
+}
+.grey{
+    font-size: 13px;
+    color: #B1B1B1;
+}
+
+.contacts{
+    border: solid 1px #EAEAEA;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.info-contact{
+    padding-left:.7rem
+}
+
+.absolute{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.circle {
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-left: .5rem;
+}
