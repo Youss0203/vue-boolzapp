@@ -31,6 +31,7 @@ section div.user-profile {
     height: 70px;
     background-color: #eaeaea;
     border-right: 1px solid #B1B1B1;
+    
 }
 
 .user-chat-profile {
@@ -62,6 +63,7 @@ div.messages {
     height: calc(100% - 145px);
     background-image: url('../img/mine.jpg');
     padding: 2rem;
+    
 }
 
 div.messages>article.message {
