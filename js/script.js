@@ -5,6 +5,7 @@ createApp({
         return {
             currentChat:0,
             newMessage:"",
+            ricercaNome:"",
             contacts: [
                 {
                     name: 'Michele',
@@ -188,6 +189,9 @@ createApp({
         this.contacts[this.currentChat].messages.push(wrtiteMessage);
         setTimeout(() => { this.okMessage()}, 1000)
     },
+    trovaContatto(){
+        return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.ricercaNome.toLowerCase()))
+    }
 }
 }).mount('#app'); 
 
